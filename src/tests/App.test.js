@@ -56,10 +56,10 @@ describe('Requisito 1', () => {
 
   test('Se redireciona para Not Found ao acessar uma URL desconhecida.', () => {
     const { history } = renderWithRouter(<App />);
+
     act(() => {
       history.push('/xablau');
     });
-    console.log(history.location.pathname);
 
     const notFound = screen.getByRole(
       'heading',
