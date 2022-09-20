@@ -4,6 +4,8 @@ import userEvent from '@testing-library/user-event';
 import App from '../App';
 import renderWithRouter from '../renderWithRouter';
 
+const literal = 'More details';
+
 describe('Testes para o componente <Pokemon.js />.', () => {
   test('Se é renderizado um card com informações de determinado pokémon.', () => {
     renderWithRouter(<App />);
@@ -25,15 +27,14 @@ describe('Testes para o componente <Pokemon.js />.', () => {
 
   test('Se contém um link para exibir detalhes deste pokémon.', () => {
     renderWithRouter(<App />);
-
-    const link = screen.getByRole('link', { name: 'More details' });
+    const link = screen.getByRole('link', { name: literal });
     expect(link).toHaveAttribute('href', '/pokemons/25');
   });
 
   test('Se ao clicar no link, redireciona para a página de detalhes.', () => {
     const { history } = renderWithRouter(<App />);
 
-    const link = screen.getByRole('link', { name: 'More details' });
+    const link = screen.getByRole('link', { name: literal });
     userEvent.click(link);
 
     const { pathname } = history.location;
@@ -43,7 +44,7 @@ describe('Testes para o componente <Pokemon.js />.', () => {
   test('Se existe um ícone de estrela nos pokémons favoritados.', () => {
     renderWithRouter(<App />);
 
-    const details = screen.getByRole('link', { name: 'More details' });
+    const details = screen.getByRole('link', { name: literal });
     userEvent.click(details);
 
     const checkbox = screen.getByLabelText('Pokémon favoritado?');
