@@ -1,13 +1,27 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+# [Trybe] - React Testing Library
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Nesse projeto desenvolvi testes para uma aplicação React já pronta e em pleno funcionamento. Para tal, utilizei Jest e RTL(React Testing Library).
+
+Cada um dos testes visa garantir a solidez do código, evitando e reduzindo possíveis bugs.
+
+Em aplicações React, os testes realizados são testes de comportamento.
+## Execução
+
+1. Clone o projeto para o seu computador:
+
+```bash
+  git clone https://github.com/machadofguilherme/trybe-react-testing-library.git
+  cd trybe-react-testing-library
+```
+2. Instale as dependências:
+
+```bash
+  npm i
+```
+
+3. Inicie a aplicação:
+
+```bash
+  npm start
+```
